@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <title>Crear producto</title>
+</head>
+<header style="background-color: rgb(31, 31, 81);">
+	<div>
+	  <div class="container">
+		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+		  <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+			<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+		  </a>
+  
+		  <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+			<li>
+			  <a href="/" class="nav-link" style="color: white;">
+				<svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+				Ver productos
+			  </a>
+			</li>
+			<li>
+			  <a href="/products/create" class="nav-link text-white">
+				<svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
+				Crear
+			  </a>
+			</li>
+			<li>
+			  <a href="/products/404-page" class="nav-link text-white">
+				<svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
+				Carrito
+			  </a>
+			</li>
+  
+		  </ul>
+		</div>
+	  </div>
+	</div>
+	<div class="px-3 py-2 border-bottom mb-3">
+	  <div class="container d-flex flex-wrap justify-content-center">
+		<form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+		  <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
+		</form>
+  
+		<div class="text-end">
+		  <button type="button" class="btn btn-light text-dark me-2">Creá tu cuenta
+		  </button>
+		  <button type="button" class="btn btn-primary">Ingresar</button>
+		</div>
+	  </div>
+	</div>
+  </header>
+<body>
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Formulario de creación de productos</h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="" method="GET">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value="<%= typeof old != 'undefined'? old.name: '' %>">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="price" class="form-label">Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input" value="<%= typeof old != 'undefined'? old.price: '' %>">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="discount" class="form-label">Descuento:</label>
+						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input" value="<%= typeof old != 'undefined'? old.discount: '' %>">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input">
+							<option value="">Elegí</option>
+						</select>
+					</div>
+					<div class="col-12">
+						<label for="description" class="form-label">Descripción:</label>
+						<textarea name="description" id="description" class="form-input"><%= typeof old != 'undefined'? old.description: '' %></textarea>
+					</div>
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>	
+</html>
