@@ -1,0 +1,9 @@
+Rutas GET
+http://localhost:3000/products/detail/id
+http://localhost:3000/products/create
+http://localhost:3000/products/edit/id
+
+Rutas POST
+http://localhost:3000/products/delete/id
+http://localhost:3000/products/create
+http://localhost:3000/products/edit/id
